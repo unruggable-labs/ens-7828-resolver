@@ -1,0 +1,51 @@
+{
+  "name": "@unruggable/ens-7828-resolver",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A fully-featured TypeScript library for parsing, resolving and displaying EIP-7828-style human-readable, chain-specific ENS names",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "src/chain-mapping.ts"
+  ],
+  "scripts": {
+    "prepare": "tsx scripts/buildChainMap.ts",
+    "build": "tsc",
+    "test": "npx tsx test-resolver.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@ensdomains/eth-ens-namehash": "^2.0.15",
+    "@ethersproject/hash": "^5.8.0",
+    "bech32": "^2.0.0",
+    "bip44-constants": "^1.0.0",
+    "bs58": "^6.0.0",
+    "ethers": "^6.0.0",
+    "zod": "^4.0.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@gazzati/eslint-config-node": "^1.0.15",
+    "@types/node": "^20.0.0",
+    "eslint": "^8.57.1",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "ens",
+    "ethereum",
+    "resolver",
+    "eip-7828"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unruggable-labs/ens-7828-resolver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unruggable-labs/ens-7828-resolver/issues"
+  },
+  "homepage": "https://github.com/unruggable-labs/ens-7828-resolver#readme"
+}
