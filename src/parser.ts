@@ -116,12 +116,27 @@ export function validateENSName(name: string): boolean {
  * @returns An object with namespace and reference fields
  * @example
  * parseCAIP2ChainId("1") // { namespace: "eip155", reference: "1" }
+ * parseCAIP2ChainId("eip155:1") // { namespace: "eip155", reference: "1" }
  * parseCAIP2ChainId("solana") // { namespace: "eip155", reference: "solana" }
  */
 export function parseCAIP2ChainId(chainSpec: string): {
   namespace: string;
   reference: string;
 } {
+  // Handle full CAIP-2 format e.g., eip155:1, bip122:000000000019d6689c085ae165831e93
+  if (chainSpec.includes(":")) {
+    const [namespace, reference] = chainSpec.split(":", 2);
+    if (!namespace || !reference) {
+      throw new Error(
+        "Invalid CAIP-2 format: namespace and reference required"
+      );
+    }
+    return {
+      namespace,
+      reference,
+    };
+  }
+
   // Handle shorthand format e.g vitalik.eth@1
   if (/^\d+$/.test(chainSpec)) {
     return {
