@@ -84,7 +84,7 @@ console.log("");
 // Test 5: Full EIP-7828 Name Parsing
 console.log("EIP-7828 Name Parsing Test:");
 const test7828Names = [
-  "alice.eth@1",
+  "alice.eth@eip155:1",
   "vitalik.eth@ethereum",
   "test.app.eth@base",
   "bob.eth@optimism#abcd1234",
@@ -109,6 +109,7 @@ console.log("");
 console.log("Full Resolution Test:");
 const resolutionTestNames = [
   "premm.eth@1",
+  "nick.eth@eip155:1",
   "ndeto.eth@solana",
   "vitalik.eth@ethereum",
   "clowes.eth@celo",
