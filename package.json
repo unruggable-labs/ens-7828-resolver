@@ -1,6 +1,6 @@
 {
   "name": "@unruggable/ens-7828-resolver",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "A fully-featured TypeScript library for parsing, resolving and displaying EIP-7828-style human-readable, chain-specific ENS names",
   "main": "dist/index.js",

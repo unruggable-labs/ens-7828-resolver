@@ -37,3 +37,6 @@ Thumbs.db
 
 # npm authentication
 .npmrc 
+
+# package-lock.json
+package-lock.json
